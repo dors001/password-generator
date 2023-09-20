@@ -20,6 +20,8 @@ html, body {
   font-size: 2.4rem;
 }
 
+/* Password Field */
+
 .password-container {
   background-color: var(--color-primary);
   height: 56px;
@@ -34,10 +36,12 @@ html, body {
   max-width: 2.1rem;
   max-height: 2.4rem;
   cursor: pointer;
+  fill: var(--color-accent);
+  transition: fill 0.15s ease-in;
 }
 
 .password-img:hover {
-  color: var(--color-secondary);
+  fill: var(--color-secondary);
 }
 
 .password-copy {
@@ -63,6 +67,8 @@ html, body {
     font-size: 1.5rem;
   }
 }
+
+/* Button */
 
 .btn-password-generator {
   background-color: var(--color-accent);
