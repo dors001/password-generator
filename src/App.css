@@ -4,6 +4,8 @@
   --color-accent: #a4ffaf;
 }
 
+/* Layout */
+
 html, body {
   background-color: #18171f;
   font-family: 'JetBrains Mono', monospace;
@@ -13,6 +15,10 @@ html, body {
 .app-container {
   max-width: 540px;
   margin: auto;
+}
+
+.params-container {
+  width: 100%;
 }
 
 .title {
@@ -58,11 +64,6 @@ html, body {
     font-size: 2.4rem;
   }
 
-  .password-img {
-    max-width: 1.75rem;
-    max-height: 2rem;
-  }
-
   .password-copy {
     font-size: 1.5rem;
   }
@@ -73,6 +74,7 @@ html, body {
 .btn-password-generator {
   background-color: var(--color-accent);
   color: #24232C;
+  width: 100%;
   height: 65px;
   font-size: 1.8rem;
   transition: all 0.15s ease-in;
@@ -102,4 +104,41 @@ html, body {
     height: 56px;
     font-size: 1.6rem;
   }
+
+  .btn-password-generator-icon {
+    margin-bottom: 0.2rem;
+  }
+}
+
+/* Password Parameters */
+
+.parameter {
+  color: var(--color-secondary);
+  font-size: 1.6rem;
+}
+
+.parameter-checkbox[type='checkbox'] {  
+  appearance: none;
+  border: 1px solid;
+  border-color: var(--color-secondary);
+  width: 2rem;
+  height: 2rem;
+}
+
+.parameter-checkbox[type='checkbox']:checked {
+  background-color: var(--color-accent);
+  background-image: url("./assets/images/icon-check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  outline: none;
+}
+
+.parameter-label {
+  line-height: 3.5rem;
+}
+
+@media screen and (min-width: 425px) {
+  .params {
+    font-size: 1.8rem;
+  } 
 }
