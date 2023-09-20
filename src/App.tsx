@@ -3,6 +3,7 @@ import "./App.css";
 import "@fontsource/jetbrains-mono/600.css";
 import PasswordField from "./components/PasswordField";
 import { useState } from "react";
+import ButtonPasswordGenertor from "./components/ButtonPasswordGenertor";
 
 function App() {
   const [password, setPassword] = useState("");
@@ -23,9 +24,9 @@ function App() {
       <div className="d-flex flex-column my-3 app-container justify-content-center">
         <div className="title mb-4 align-self-center">Password Generator</div>
         <PasswordField password={password} />
-        <button className="btn btn-primary" onClick={generateRandomPassword}>
-          generate password
-        </button>
+        <ButtonPasswordGenertor
+          generateRandomPassword={generateRandomPassword}
+        />
       </div>
     </>
   );

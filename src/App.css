@@ -63,3 +63,37 @@ html, body {
     font-size: 1.5rem;
   }
 }
+
+.btn-password-generator {
+  background-color: var(--color-accent);
+  color: #24232C;
+  height: 65px;
+  font-size: 1.8rem;
+  transition: all 0.15s ease-in;
+}
+
+.btn-password-generator:hover {
+  background-color: transparent;
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.btn-password-generator-icon {
+  width: 11px;
+  height: 16px;
+  margin-top: 0.2rem;
+  fill: #24232C;
+  transition: transform 0.2s ease-in;
+}
+
+.btn-password-generator:hover .btn-password-generator-icon {
+  transform: translateX(0.5rem);
+  fill: var(--color-accent);
+}
+
+@media screen and (max-width: 425px) {
+  .btn-password-generator {
+    height: 56px;
+    font-size: 1.6rem;
+  }
+}
