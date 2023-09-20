@@ -74,10 +74,12 @@ html, body {
 .btn-password-generator {
   background-color: var(--color-accent);
   color: #24232C;
-  width: 100%;
+  margin:3.2rem;
+  width: 476px;
   height: 65px;
   font-size: 1.8rem;
   transition: all 0.15s ease-in;
+  border: none;
 }
 
 .btn-password-generator:hover {
@@ -103,6 +105,8 @@ html, body {
   .btn-password-generator {
     height: 56px;
     font-size: 1.6rem;
+    width: 311px;
+    margin: 1.6rem;
   }
 
   .btn-password-generator-icon {
@@ -111,6 +115,10 @@ html, body {
 }
 
 /* Password Parameters */
+
+.params-container {
+  background-color: var(--color-primary);
+}
 
 .parameter {
   color: var(--color-secondary);
@@ -141,4 +149,64 @@ html, body {
   .params {
     font-size: 1.8rem;
   } 
+}
+
+/* Characters Length */
+
+.letter-length-container {
+  margin: 2rem
+}
+
+.range-container {
+  width: 100%;
+}
+
+.range-bar {
+  width: 100%;
+  height: 8px;
+  appearance: none;
+  background: #18171F;
+}
+
+.range-bar::-webkit-slider-thumb {
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.range-bar::-webkit-slider-thumb:hover {
+  background: #18171F;
+  border: 1px solid #a4ffaf;
+}
+
+.range-bar::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+  cursor: pointer;
+}
+
+.range-value {
+  font-size: 3.2rem;
+  color: var(--color-accent);
+}
+
+.letter-length-title {
+  color: var(--color-secondary);
+  font-size: 1.8rem;
+}
+
+@media screen and (max-width: 425px) {
+  .range-value {
+    font-size: 2.4rem;
+  }
+
+  .letter-length-title {
+    font-size: 1.6rem;
+  }
 }

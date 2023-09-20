@@ -5,10 +5,16 @@ import PasswordField from "./components/PasswordField";
 import { useState } from "react";
 import ButtonPasswordGenertor from "./components/ButtonPasswordGenertor";
 import CheckboxField, { Params } from "./components/CheckboxField";
+import RangeBar from "./components/RangeBar";
 
 function App() {
   const [password, setPassword] = useState("");
   const [checkedParams, setCheckedParams] = useState<string[]>([]);
+  const [charNum, setCharNum] = useState(10);
+
+  const handleCharNumChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setCharNum(parseInt(event.target.value));
+  };
 
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.checked) {
@@ -19,7 +25,7 @@ function App() {
   };
 
   const generateRandomPassword = () => {
-    let length = 12;
+    let length = charNum;
     let charset = "";
     let retVal = "";
 
@@ -48,11 +54,12 @@ function App() {
         <div className="title mb-4 align-self-center">Password Generator</div>
         <PasswordField password={password} />
         <div className="params-container">
+          <RangeBar handleChange={handleCharNumChange} value={charNum} />
           <CheckboxField handleCheckboxChange={handleCheckboxChange} />
+          <ButtonPasswordGenertor
+            generateRandomPassword={generateRandomPassword}
+          />
         </div>
-        <ButtonPasswordGenertor
-          generateRandomPassword={generateRandomPassword}
-        />
       </div>
     </>
   );

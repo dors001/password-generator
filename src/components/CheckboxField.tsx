@@ -22,7 +22,7 @@ const CheckboxField = ({ handleCheckboxChange }: Props) => {
       {params &&
         params.map((p, index) => {
           return (
-            <div className="d-flex parameter align-items-center" key={index}>
+            <div className="d-flex parameter align-items-center ms-4" key={index}>
               <input
                 className="parameter-checkbox me-3"
                 type="checkbox"
