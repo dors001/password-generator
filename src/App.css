@@ -1,0 +1,65 @@
+:root {
+  --color-primary: #817D82;
+  --color-secondary: #e6e5ea;
+  --color-accent: #a4ffaf;
+}
+
+html, body {
+  background-color: #18171f;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 62.5%;
+}
+
+.app-container {
+  max-width: 540px;
+  margin: auto;
+}
+
+.title {
+  color: var(--color-primary);
+  font-size: 2.4rem;
+}
+
+.password-container {
+  background-color: var(--color-primary);
+  height: 56px;
+}
+
+.password {
+  color: var(--color-secondary);
+  font-size: 3.2rem;
+}
+
+.password-img {
+  max-width: 2.1rem;
+  max-height: 2.4rem;
+  cursor: pointer;
+}
+
+.password-img:hover {
+  color: var(--color-secondary);
+}
+
+.password-copy {
+  color: var(--color-accent);
+  font-size: 1.8rem;
+}
+
+@media screen and (max-width: 425px) {
+  .app-container {
+    margin: auto 1.6rem;
+  }
+  
+  .password {
+    font-size: 2.4rem;
+  }
+
+  .password-img {
+    max-width: 1.75rem;
+    max-height: 2rem;
+  }
+
+  .password-copy {
+    font-size: 1.5rem;
+  }
+}
