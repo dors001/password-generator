@@ -1,5 +1,5 @@
 :root {
-  --color-primary: #817D82;
+  --color-primary: #24232C;
   --color-secondary: #e6e5ea;
   --color-accent: #a4ffaf;
 }
@@ -22,7 +22,7 @@ html, body {
 }
 
 .title {
-  color: var(--color-primary);
+  color: #817D92;
   font-size: 2.4rem;
 }
 
@@ -208,5 +208,40 @@ html, body {
 
   .letter-length-title {
     font-size: 1.6rem;
+  }
+}
+
+/* Password Strength */
+
+.strength-container {
+  margin: 3rem 2rem;
+}
+
+.strength-title {
+  color: #817D92;
+  font-size: 1.8rem;
+}
+
+.strength-level {
+  color: var(--color-secondary);
+  font-size: 2.4rem;
+  margin-right: 1rem;
+}
+
+.strength-meter {
+  width: 10px;
+  height: 28px;
+  border: 1px solid;
+  border-color: var(--color-secondary);
+  margin: 0.3rem;
+}
+
+@media screen and (max-width: 425px) {
+  .strength-title{
+    font-size: 1.6rem;
+  }
+
+  .strength-level {
+    font-size: 1.8rem;
   }
 }
