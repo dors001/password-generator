@@ -16,6 +16,7 @@ function App() {
 
   const handleCharNumChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setCharNum(parseInt(event.target.value));
+    document.documentElement.style.setProperty("--slider-percentage", `${charNum}%`);
   };
 
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -84,7 +85,7 @@ function App() {
 
   return (
     <>
-      <div className="d-flex flex-column my-3 app-container justify-content-center">
+      <div className="d-flex flex-column my-3 app-container justify-content-center ">
         <div className="title mb-4 align-self-center">Password Generator</div>
         <PasswordField password={password} />
         <div className="params-container mt-4">

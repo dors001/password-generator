@@ -6,6 +6,11 @@ interface Props {
 }
 
 const RangeBar = ({ value, handleChange }: Props) => {
+  const min = 8;
+  const max = 20;
+
+  const percentage = ((value - min) / (max - min)) * 100;
+
   return (
     <>
       <div className="letter-length-container">
@@ -21,6 +26,9 @@ const RangeBar = ({ value, handleChange }: Props) => {
             max="20"
             value={value}
             onChange={handleChange}
+            style={
+              { "--slider-percentage": `${percentage}%` } as React.CSSProperties
+            }
           />
         </div>
       </div>
